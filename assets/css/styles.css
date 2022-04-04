@@ -62,6 +62,7 @@ a {
 
 header {
     grid-area: h;
+    text-transform: uppercase;
 }
 
 footer {
@@ -74,6 +75,27 @@ footer {
 .wrapper {
     margin: 0 30px;
 }
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+    nav li {
+        padding: 1em;
+    }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+    header img {
+        width: 200px;
+        /* height: 100%; */
+        padding: 0.5em;
+    }
+
 
 
 /* || gallery page */
@@ -118,58 +140,79 @@ footer {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr 1fr;
 
+    grid-template-areas:
+    "h h h h h h h h h h h h"
+    "gh gh gh gh gh gh gh gh gh gh gh gh" 
+    "ba ba ba ba bb bb bb bb bh bh bh bh"
+    "bj bj bj bj bp bp bp bp bq bq bq bq"
+    ;
+
     /* grid-template-columns: 1fr, 1fr, 1fr; */
 
 }
 
     .box{
-        height: 40vh;
+        height: 20em;
+        width: 100%;
         text-align: center;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
         .box.anthes {
             background-image: url(../images/anthes1.jpeg);
             background-size: cover;
-            grid-column-start: 1;
-            grid-column-end: 5;
+            background-position: center center;
+            grid-area: ba;
+            /* grid-column-start: 1;
+            grid-column-end: 5; */
         }
 
         .box.booth {
             background-image: url(../images/booth1.jpeg);
             background-size: cover;
-            grid-column-start: 5;
-            grid-column-end: 9;
+            background-position: center bottom;
+            /* grid-column-start: 5;
+            grid-column-end: 9; */
+            grid-area: bb;
 
         }
 
         .box.hall {
             background-image: url(../images/hall1.jpeg);
             background-size: cover;
-            grid-column-start: 9;
-            grid-column-end: 13;
+            background-position: center center;
+            /* grid-column-start: 9;
+            grid-column-end: 13; */
+            grid-area: bh;
         }
 
         .box.johns {
             background-image: url(../images/johns1.jpeg);
             background-size: cover;
-            grid-column-start: 1;
-            grid-column-end: 5;
+            background-position: center bottom;
+            /* grid-column-start: 1;
+            grid-column-end: 5; */
+            grid-area: bj;
         }
 
         .box.poliness {
             background-image: url(../images/poliness1.jpeg);
             background-size: cover;
-            grid-column-start: 5;
-            grid-column-end: 9;
+            background-position: center center;
+            /* grid-column-start: 5;
+            grid-column-end: 9; */
+            grid-area: bp;
         }
 
         .box.quinlivan {
             background-image: url(../images/quinlivan1.jpeg);
             background-size: cover;
-            grid-column-start: 9;
-            grid-column-end: 13;
+            background-position: center center;
+            /* grid-column-start: 9;
+            grid-column-end: 13; */
+            grid-area: bq;
         }
 
     .name {
@@ -209,6 +252,11 @@ footer {
     grid-area: ai;
     margin-bottom: 1em;
 }
+
+    .arrow {
+        margin-top: 75vh;
+        align-items: center;
+    }
 
 .artist-main {
     background: #fff;
@@ -266,7 +314,24 @@ footer {
         font-size: 1.2em;
         margin-bottom: 1em;
     }
-}
+    .gallery-tiles {    
+        grid-template-areas:
+        "h h h h h h h h h h h h"
+        "gh gh gh gh gh gh gh gh gh gh gh gh" 
+        "ba ba ba ba ba ba ba ba ba ba ba ba"
+        "bb bb bb bb bb bb bb bb bb bb bb bb"
+        "bh bh bh bh bh bh bh bh bh bh bh bh"
+        "bj bj bj bj bj bj bj bj bj bj bj bj"
+        "bp bp bp bp bp bp bp bp bp bp bp bp"
+        "bq bq bq bq bq bq bq bq bq bq bq bq"
+        "f f f f f f f f f f f f"
+        ;
+    }
+/*     
+    .box{
+        height: 20em;
+        width: 100vw;
+} */
 
 @media (min-width: 42em) and (max-width: 60em){
     .artist{
@@ -277,3 +342,22 @@ footer {
         "m m m m m m m m ad ad ad ad"
         "f f f f f f f f f f f f"
     }
+    .gallery-tiles {    
+        grid-template-areas:
+        "h h h h h h h h h h h h"
+        "gh gh gh gh gh gh gh gh gh gh gh gh" 
+        "ba ba ba ba ba ba bb bb bb bb bb bb"
+        "bh bh bh bh bh bh bj bj bj bj bj bj"
+        "bp bp bp bp bp bp bq bq bq bq bq bq"
+        "f f f f f f f f f f f f"
+        ;
+    }
+
+}
+
+    /* @media (max-width: 42em) {
+        .box{
+            height: 10em;
+    }
+} */
+    
