@@ -2,14 +2,17 @@
 
 body {
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
     color: #242424;
+
+    /* 200 400 600 */
 }
 
 h1 {
     font-size: 2.6em;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.5em;
 }
 
@@ -19,8 +22,18 @@ h2 {
 
 h3 {
     font-size: 1.5em;
-    color: #868686;
+    /* color: #868686; */
     font-weight: 200;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 p {
@@ -62,9 +75,24 @@ a {
 
 header {
     grid-area: h;
-    text-transform: uppercase;
+    text-transform: uppercase;    
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ececec;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
 }
-
+    header img {
+            width: 200px;
+            /* height: 100%; */
+            padding: 0.5em;
+        }
+main {
+    padding-top: 5em;
+    /* grid-area: a; */
+}
 footer {
     grid-area: f;
     background-color: #868686;
@@ -84,18 +112,39 @@ nav ul {
         padding: 1em;
     }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+
+/* || index */
+
+.index-hero {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: -5;
+    
+    background: url(../images/hall1.jpeg);   
+    background-size: cover;
+    background-position: center center;
 }
 
-    header img {
-        width: 200px;
-        /* height: 100%; */
-        padding: 0.5em;
+    .index-hero-info {
+        width: 50%;
+        height: auto;
+        background-color: white;
     }
 
+    /* .index-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+.index-logo img {
+    width: 60%;
+    align-self: center; */
+
+    
 
 
 /* || gallery page */
@@ -141,7 +190,7 @@ header {
     grid-template-rows: 1fr 1fr;
 
     grid-template-areas:
-    "h h h h h h h h h h h h"
+    /* "h h h h h h h h h h h h" */
     "gh gh gh gh gh gh gh gh gh gh gh gh" 
     "ba ba ba ba bb bb bb bb bh bh bh bh"
     "bj bj bj bj bp bp bp bp bq bq bq bq"
@@ -229,13 +278,14 @@ header {
 .artist {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(50px, auto);
+    /* grid-auto-rows: minmax(50px, auto); */
     grid-template-areas: 
-    "h h h h h h h h h h h h"
+    /* "h h h h h h h h h h h h" */
+    "a a a a a a a a a a a a"
     "ah ah ah ah ah ah ah ah ah ah ah ah"
     "ai ai ai ai ai ai ai ai ai ai ai ai"
     "m m m m m m m . . ad ad ad"
-    "f f f f f f f f f f f f"
+    /* "f f f f f f f f f f f f" */
 
 }
 
@@ -243,6 +293,11 @@ header {
     display: flex;
     justify-content: space-between;
     grid-area: ah;
+    margin-top: -0.4em;
+    padding: 1em;
+
+    /* margin: 1em; */
+    /* margin-top: 1.5em; */
 }
 
 .artist-hero { 
@@ -253,10 +308,10 @@ header {
     margin-bottom: 1em;
 }
 
-    .arrow {
+    /* .arrow {
         margin-top: 75vh;
         align-items: center;
-    }
+    } */
 
 .artist-main {
     background: #fff;
@@ -294,6 +349,55 @@ header {
     }
 
 
+/* || donate */
+
+form {
+    width: 60%;
+    padding: 2em;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #cecece;
+    border-radius: 6px;
+  }
+
+    input[type=text]:focus {
+    border: 1px solid #555;
+    }
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #000;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 40px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    }
+
+
+
+
+/* || about */
+.team {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-tile {
+    width: 20%;
+    height: auto;
+    background: #cecece;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+}
 
 
 
@@ -302,12 +406,12 @@ header {
 @media (max-width: 42em) {
     .artist{
         grid-template-areas: 
-        "h h h h h h h h h h h h"
+        /* "h h h h h h h h h h h h" */
         "ah ah ah ah ah ah ah ah ah ah ah ah"
         "ai ai ai ai ai ai ai ai ai ai ai ai"
         "ad ad ad ad ad ad ad ad ad ad ad ad"
         "m m m m m m m m m m m m"
-        "f f f f f f f f f f f f"
+        /* "f f f f f f f f f f f f" */
     }
 
     h3 {
@@ -316,7 +420,7 @@ header {
     }
     .gallery-tiles {    
         grid-template-areas:
-        "h h h h h h h h h h h h"
+        /* "h h h h h h h h h h h h" */
         "gh gh gh gh gh gh gh gh gh gh gh gh" 
         "ba ba ba ba ba ba ba ba ba ba ba ba"
         "bb bb bb bb bb bb bb bb bb bb bb bb"
@@ -324,7 +428,7 @@ header {
         "bj bj bj bj bj bj bj bj bj bj bj bj"
         "bp bp bp bp bp bp bp bp bp bp bp bp"
         "bq bq bq bq bq bq bq bq bq bq bq bq"
-        "f f f f f f f f f f f f"
+        /* "f f f f f f f f f f f f" */
         ;
     }
 /*     
@@ -336,20 +440,21 @@ header {
 @media (min-width: 42em) and (max-width: 60em){
     .artist{
         grid-template-areas: 
-        "h h h h h h h h h h h h"
+        /* "h h h h h h h h h h h h" */
         "ah ah ah ah ah ah ah ah ah ah ah ah"
         "ai ai ai ai ai ai ai ai ai ai ai ai"
         "m m m m m m m m ad ad ad ad"
-        "f f f f f f f f f f f f"
+        /* "f f f f f f f f f f f f" */
     }
+
     .gallery-tiles {    
         grid-template-areas:
-        "h h h h h h h h h h h h"
+        /* "h h h h h h h h h h h h" */
         "gh gh gh gh gh gh gh gh gh gh gh gh" 
         "ba ba ba ba ba ba bb bb bb bb bb bb"
         "bh bh bh bh bh bh bj bj bj bj bj bj"
         "bp bp bp bp bp bp bq bq bq bq bq bq"
-        "f f f f f f f f f f f f"
+        /* "f f f f f f f f f f f f" */
         ;
     }
 
