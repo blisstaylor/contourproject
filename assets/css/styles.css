@@ -190,7 +190,7 @@ nav li {
 
 .box.johns {
     background-image: url(../images/johns1.jpeg);
-    background-position: center bottom;
+    background-position: center center;
     grid-area: bj;
 }
 
