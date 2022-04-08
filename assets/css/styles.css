@@ -44,6 +44,7 @@ p {
 a {
     color: #868686;
     text-decoration: none;
+    transition: 0.2s;
 }
 
 a#current {
@@ -65,10 +66,10 @@ a:hover {
 /* || other global styles */
 header {
     grid-area: h;
-    text-transform: uppercase;    
+    text-transform: lowercase;    
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0.5em;
     background-color: #ececec;
     width: 100vw;
     position: fixed;
@@ -95,14 +96,30 @@ footer {
     margin: 0 30px;
 }
 
-nav ul {
+nav {
     display: flex;
     justify-content: flex-end;
+    padding-right: 1em;
 }
 
-nav li {
+#hamburger-items {
+    display: flex;
+}
+
+#hamburger-items a {
+    flex-grow: 1;
+    flex-basis: 0;
     padding: 1em;
 }
+
+#hamburger-nav label, #hamburger {
+    display: none;
+}
+
+input {
+    font-family: 'Jost', sans-serif;
+}
+
 
 /* || index */
 .index-hero {
@@ -111,7 +128,6 @@ nav li {
     position: sticky;
     top: 0;
     z-index: -5;
-    
     background: url(../images/hall1.jpeg);   
     background-size: cover;
     background-position: center center;
@@ -124,7 +140,7 @@ nav li {
     background-color: white;
     position: relative;
     left: 1em;
-    top: 40em;
+    top: 70vh;
 }
 
 /* || gallery page */
@@ -154,11 +170,16 @@ nav li {
     width: 100%;
     height: 100%;
     display: block;
-    color: #fff;
+    color: #000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 0);
+    transition: 0.2s;
+
 }
 
+/* names appear on hover on desktop, always visible on tablets/mobiles see @media at end, background slightly darker to increase visibility of white text over bright images */
 .box a:hover {
-    color: #287ff1;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
 }
 
 .name { 
@@ -171,7 +192,7 @@ nav li {
     
 /* background-position is repeated because images differ */
 .box.anthes {
-    background-image: url(../images/anthes1.jpeg);
+    background-image: url(../images/anthes1.jpg);
     background-position: center center;
     grid-area: ba;
 }
@@ -225,7 +246,6 @@ nav li {
     display: flex;
     justify-content: space-between;
     grid-area: ah;
-    margin-top: -0.4em;
     padding: 1em;
 
     /* margin: 1em; */
@@ -256,7 +276,7 @@ nav li {
 
 /* | hero images */
 .artist-hero.anthes {
-    background-image: url(../images/anthes1.jpeg);
+    background-image: url(../images/anthes1.jpg);
     background-position: center center;
 }
 
@@ -434,6 +454,7 @@ input[type=reset] {
             font-size: 1.2em;
             margin-bottom: 1em;
         }
+
         .gallery-tiles {
             grid-template-areas:
                 "gh gh gh gh gh gh gh gh gh gh gh gh" 
@@ -444,6 +465,41 @@ input[type=reset] {
                 "bp bp bp bp bp bp bp bp bp bp bp bp"
                 "bq bq bq bq bq bq bq bq bq bq bq bq"
                 ;
+        }
+
+        #hamburger-items a {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            /* border-top: 1px solid #000; */
+            margin-right: 2em;
+        }
+        
+        #hamburger-nav label {
+            display: inline-block;
+            color: #000;
+            font-style: normal;
+            font-size: 1.2em;
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+            padding-right: 1em;
+
+        }
+
+        #hamburger-items {
+            display: none;
+        }
+
+        #hamburger-nav input:checked ~ #hamburger-items {
+            display: block;
+        }
+
+        .index-hero-info {
+            top: 60vh;
+        }
+        
+        .index-hero-info h1 p {
+            margin: 1em;
         }
     }
 
@@ -495,12 +551,19 @@ input[type=reset] {
                 "xh xh xh xh xh xh xh xh xh xh xh xh"
                 ;
         }
+
         .about-main {
             margin-bottom: 5em;
         }
+
         .team-details img {
             margin-bottom: 2em;
         } 
+
+        .box a {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
     }
 
     /* @media (max-width: 42em) {
