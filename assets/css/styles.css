@@ -83,7 +83,7 @@ a:hover {
 /* || other global styles */
 header {
     grid-area: h;
-    text-transform: lowercase;    
+    text-transform: lowercase;
     display: flex;
     justify-content: space-between;
     padding: 0.5em;
@@ -147,7 +147,8 @@ nav {
     padding: 1em;
 }
 
-#hamburger-nav label, #hamburger {
+#hamburger-nav label,
+#hamburger {
     display: none;
 }
 
@@ -182,7 +183,7 @@ input {
     position: sticky;
     top: 0;
     z-index: -5;
-    background: url(../images/hall1.jpeg);   
+    background: url(../images/hall1.jpeg);
     background-size: cover;
     background-position: center center;
     grid-area: ih;
@@ -217,11 +218,11 @@ iframe {
     display: grid;
     /* width: 100%; */
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: 
-    "ba ba ba ba bp bp bp bp bq bq bq bq";
+    grid-template-areas:
+        "ba ba ba ba bp bp bp bp bq bq bq bq";
 }
 
-.index-gallery > .box {
+.index-gallery>.box {
     height: 15em;
 }
 
@@ -245,8 +246,8 @@ iframe {
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: 
-    "ina ina ina ina ina ina inb inb inb inb inb inb";
+    grid-template-areas:
+        "ina ina ina ina ina ina inb inb inb inb inb inb";
 }
 
 .index-news-a {
@@ -270,10 +271,10 @@ iframe {
     /* height: 20em; */
     object-fit: cover;
     padding-bottom: 1em;
-    max-width: 100%;
+    width: 100%;
 }
 
-.news-tile-index h2, 
+.news-tile-index h2,
 .news-tile-index p {
     padding: 0 20px;
 }
@@ -295,16 +296,16 @@ iframe {
         "gi gi gi gi gi gi gi . . . . ."
         ; */
 
-        grid-template-areas:
-        "gh gh gh gh gh gh gh gh gh gh gh gh" 
+    grid-template-areas:
+        "gh gh gh gh gh gh gh gh gh gh gh gh"
         "ba ba ba ba bb bb bb bb bb bb bb bb"
         "bh bh bh bh bh bh bh bh bj bj bj bj"
         "bp bp bp bp bq bq bq bq bq bq bq bq"
         "gi gi gi gi gi gi gi . . . . ."
-        ;
+    ;
 }
 
-.box{
+.box {
     height: 20em;
     width: 100%;
     background-size: cover;
@@ -314,7 +315,8 @@ iframe {
     width: 100%;
     height: 100%;
     display: block;
-    color: #000; /* Fallback for older browsers */
+    color: #000;
+    /* Fallback for older browsers */
     color: rgba(0, 0, 0, 0);
     transition: 0.2s;
 }
@@ -322,13 +324,14 @@ iframe {
 .gallery-info {
     margin: 2em;
 }
+
 /* names appear on hover on desktop, always visible on tablets/mobiles see @media at end, background slightly darker to increase visibility of white text over bright images */
 .box a:hover {
     background-color: rgba(0, 0, 0, 0.3);
     color: #ffffff;
 }
 
-.name { 
+.name {
     text-align: center;
     display: flex;
     align-items: center;
@@ -336,7 +339,7 @@ iframe {
     height: 100%;
     background-size: cover;
 }
-    
+
 /* background-position is repeated because images differ */
 .box.anthes {
     background-image: url(../images/anthes1.jpg);
@@ -382,7 +385,7 @@ iframe {
 .artist {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
         "a a a a a a a a a a a a"
         "ah ah ah ah ah ah ah ah ah ah ah ah"
         "ai ai ai ai ai ai ai ai ai ai ai ai"
@@ -406,7 +409,7 @@ iframe {
     margin-bottom: 1em;
 }
 
-    /* .arrow {
+/* .arrow {
         margin-top: 75vh;
         align-items: center;
     } */
@@ -482,8 +485,8 @@ input[type=text]:focus {
     border: 1px solid #555;
 }
 
-input[type=button], 
-input[type=submit], 
+input[type=button],
+input[type=submit],
 input[type=reset] {
     background-color: #000;
     border: none;
@@ -514,7 +517,7 @@ textarea {
     width: 100%;
 }
 
-.left-form, 
+.left-form,
 .right-form {
     width: 50%;
 }
@@ -526,7 +529,7 @@ textarea {
 .donate {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
         "di di di . df df df df df df df df"
         "s s s s s s s s s s s s";
 }
@@ -569,7 +572,7 @@ textarea {
     position: sticky;
     top: 0;
     z-index: -5;
-    background: url(../images/poliness1.jpeg);   
+    background: url(../images/poliness1.jpeg);
     background-size: cover;
     background-position: center center;
     grid-area: ih;
@@ -610,7 +613,7 @@ textarea {
         "xf xf xf xf xf xf xf . . yf yf yf"
         "xg xg xg xg xg xg xg . . yg yg yg"
         "xh xh xh xh xh xh xh . . yh yh yh"
-        ;
+    ;
 }
 
 .about-a {
@@ -678,9 +681,10 @@ textarea {
 }
 
 /* || news */
-/* .news-tiles-container { */
-    /* padding: 2em; */
-/* } */
+.news-tiles-container {
+    margin-left: 2em;
+    margin-right: 2em;
+}
 
 .news-tile {
     width: 100%;
@@ -695,10 +699,10 @@ textarea {
     height: 20em;
     object-fit: cover;
     padding-bottom: 1em;
-    max-width: 100%;
+    width: 100%;
 }
 
-.news-tile h2, 
+.news-tile h2,
 .news-tile p {
     padding: 0 20px;
 }
@@ -709,9 +713,9 @@ textarea {
     grid-template-columns: repeat(12, 1fr);
     gap: 1em;
     /* padding: 2em; */
-    grid-template-areas: 
-    "na na na na nb nb nb nb nc nc nc nc"
-    "nd nd nd nd ne ne ne ne nf nf nf nf";
+    grid-template-areas:
+        "na na na na nb nb nb nb nc nc nc nc"
+        "nd nd nd nd ne ne ne ne nf nf nf nf";
 }
 
 .news-a {
@@ -764,73 +768,99 @@ textarea {
 
 /* || media queries */
 
-    @media (max-width: 42em) {
-        .artist{
-            grid-template-areas: 
-                "ah ah ah ah ah ah ah ah ah ah ah ah"
-                "ai ai ai ai ai ai ai ai ai ai ai ai"
-                "ad ad ad ad ad ad ad ad ad ad ad ad"
-                "m m m m m m m m m m m m"
-                ;
-        }
-
-        h3 {
-            font-size: 1.2em;
-            margin-bottom: 1em;
-        }
-
-        .gallery-tiles {
-            grid-template-areas:
-                "gh gh gh gh gh gh gh gh gh gh gh gh" 
-                "ba ba ba ba ba ba ba ba ba ba ba ba"
-                "bb bb bb bb bb bb bb bb bb bb bb bb"
-                "bh bh bh bh bh bh bh bh bh bh bh bh"
-                "bj bj bj bj bj bj bj bj bj bj bj bj"
-                "bp bp bp bp bp bp bp bp bp bp bp bp"
-                "bq bq bq bq bq bq bq bq bq bq bq bq"
-                "gi gi gi gi gi gi gi gi gi gi gi gi"
-                ;
-        }
-
-        #hamburger-items a {
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-            /* border-top: 1px solid #000; */
-            margin-right: 2em;
-        }
-        
-        #hamburger-nav label {
-            display: inline-block;
-            color: #000;
-            font-style: normal;
-            font-size: 1.2em;
-            padding-top: 0.6em;
-            padding-bottom: 0.6em;
-            padding-right: 1em;
-
-        }
-
-        #hamburger-items {
-            display: none;
-        }
-
-        #hamburger-nav input:checked ~ #hamburger-items {
-            display: block;
-        }
-
-        .index-hero-info {
-            top: 60vh;
-        }
-        
-        .index-hero-info h1 p {
-            margin: 1em;
-        }
-
-        h2 {
-            font-size: 1.4em;
-        }
+@media (max-width: 42em) {
+    .artist {
+        grid-template-areas:
+            "ah ah ah ah ah ah ah ah ah ah ah ah"
+            "ai ai ai ai ai ai ai ai ai ai ai ai"
+            "ad ad ad ad ad ad ad ad ad ad ad ad"
+            "m m m m m m m m m m m m"
+        ;
     }
+
+    h3 {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    .gallery-tiles {
+        grid-template-areas:
+            "gh gh gh gh gh gh gh gh gh gh gh gh"
+            "ba ba ba ba ba ba ba ba ba ba ba ba"
+            "bb bb bb bb bb bb bb bb bb bb bb bb"
+            "bh bh bh bh bh bh bh bh bh bh bh bh"
+            "bj bj bj bj bj bj bj bj bj bj bj bj"
+            "bp bp bp bp bp bp bp bp bp bp bp bp"
+            "bq bq bq bq bq bq bq bq bq bq bq bq"
+            "gi gi gi gi gi gi gi gi gi gi gi gi"
+        ;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #hamburger-items a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        /* border-top: 1px solid #000; */
+        margin-right: 2em;
+    }
+
+    #hamburger-nav label {
+        display: inline-block;
+        color: #000;
+        font-style: normal;
+        font-size: 1.2em;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        padding-right: 1em;
+
+        /* display: inline-block */
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #hamburger-items {
+        display: none;
+    }
+
+    #hamburger-nav input:checked~#hamburger-items {
+        display: block;
+    }
+
+    .index-hero-info {
+        top: 60vh;
+    }
+
+    .index-hero-info h1 p {
+        margin: 1em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .news-tiles {
+        grid-template-areas:
+            "na na na na na na na na na na na na"
+            "nb nb nb nb nb nb nb nb nb nb nb nb"
+            "nc nc nc nc nc nc nc nc nc nc nc nc"
+            "nd nd nd nd nd nd nd nd nd nd nd nd"
+            "ne ne ne ne ne ne ne ne ne ne ne ne"
+            "nf nf nf nf nf nf nf nf nf nf nf nf";
+    }
+
+    .inews {
+        grid-template-areas:
+            "ina ina ina ina ina ina ina ina ina ina ina ina"
+            "inb inb inb inb inb inb inb inb inb inb inb inb";
+    }
+
+    .news-tile-index {
+        height: 30em;
+}
 
 /*     
     .box{
@@ -838,80 +868,78 @@ textarea {
         width: 100vw;
 } */
 
-    @media (min-width: 42em) and (max-width: 70em) {
-        .artist{
-            grid-template-areas:
-                "ah ah ah ah ah ah ah ah ah ah ah ah"
-                "ai ai ai ai ai ai ai ai ai ai ai ai"
-                "m m m m m m m m ad ad ad ad";
-        }
-
-        .gallery-tiles {            
-            grid-template-areas:
-                "gh gh gh gh gh gh gh gh gh gh gh gh" 
-                "ba ba ba ba ba ba ba ba ba ba ba ba" 
-                "bb bb bb bb bb bb bh bh bh bh bh bh"
-                "bj bj bj bj bj bj bj bj bj bj bj bj"
-                "bp bp bp bp bp bp bq bq bq bq bq bq"
-                "gi gi gi gi gi gi gi gi gi gi gi gi"
-                ;
-        }
+@media (min-width: 42em) and (max-width: 70em) {
+    .artist {
+        grid-template-areas:
+            "ah ah ah ah ah ah ah ah ah ah ah ah"
+            "ai ai ai ai ai ai ai ai ai ai ai ai"
+            "m m m m m m m m ad ad ad ad";
     }
 
-
-    @media (max-width: 60em) {
-        .team-details {
-            grid-template-areas:
-                "ya ya ya ya ya ya ya ya ya ya ya ya"
-                "xa xa xa xa xa xa xa xa xa xa xa xa"
-                "yb yb yb yb yb yb yb yb yb yb yb yb"
-                "xb xb xb xb xb xb xb xb xb xb xb xb"
-                "yc yc yc yc yc yc yc yc yc yc yc yc"
-                "xc xc xc xc xc xc xc xc xc xc xc xc"
-                "yd yd yd yd yd yd yd yd yd yd yd yd"
-                "xd xd xd xd xd xd xd xd xd xd xd xd"
-                "ye ye ye ye ye ye ye ye ye ye ye ye"
-                "xe xe xe xe xe xe xe xe xe xe xe xe"
-                "yf yf yf yf yf yf yf yf yf yf yf yf"
-                "xf xf xf xf xf xf xf xf xf xf xf xf"
-                "yg yg yg yg yg yg yg yg yg yg yg yg"
-                "xg xg xg xg xg xg xg xg xg xg xg xg"
-                "yh yh yh yh yh yh yh yh yh yh yh yh"
-                "xh xh xh xh xh xh xh xh xh xh xh xh"
-                ;
-        }
-
-        .about-main {
-            margin-bottom: 5em;
-        }
-
-        .team-details img {
-            margin-bottom: 2em;
-        } 
-
-        .box a {
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
-        .index-gallery {
-            grid-template-areas: 
-                "ba ba ba ba ba ba ba ba ba ba ba ba"
-                "bp bp bp bp bp bp bp bp bp bp bp bp"
-                "bq bq bq bq bq bq bq bq bq bq bq bq";
-        }
-
-        .news-tiles {
-            grid-template-areas: 
-                "na na na na na na na na na na na na"
-                "nb nb nb nb nb nb nb nb nb nb nb nb"
-                "nc nc nc nc nc nc nc nc nc nc nc nc";
-        }
+    .gallery-tiles {
+        grid-template-areas:
+            "gh gh gh gh gh gh gh gh gh gh gh gh"
+            "ba ba ba ba ba ba ba ba ba ba ba ba"
+            "bb bb bb bb bb bb bh bh bh bh bh bh"
+            "bj bj bj bj bj bj bj bj bj bj bj bj"
+            "bp bp bp bp bp bp bq bq bq bq bq bq"
+            "gi gi gi gi gi gi gi gi gi gi gi gi"
+        ;
     }
 
-    /* @media (max-width: 42em) {
+    .news-tiles {
+        grid-template-areas:
+            "na na na na na na nb nb nb nb nb nb"
+            "nc nc nc nc nc nc nd nd nd nd nd nd"
+            "ne ne ne ne ne ne nf nf nf nf nf nf";
+    }
+}
+
+
+@media (max-width: 60em) {
+    .team-details {
+        grid-template-areas:
+            "ya ya ya ya ya ya ya ya ya ya ya ya"
+            "xa xa xa xa xa xa xa xa xa xa xa xa"
+            "yb yb yb yb yb yb yb yb yb yb yb yb"
+            "xb xb xb xb xb xb xb xb xb xb xb xb"
+            "yc yc yc yc yc yc yc yc yc yc yc yc"
+            "xc xc xc xc xc xc xc xc xc xc xc xc"
+            "yd yd yd yd yd yd yd yd yd yd yd yd"
+            "xd xd xd xd xd xd xd xd xd xd xd xd"
+            "ye ye ye ye ye ye ye ye ye ye ye ye"
+            "xe xe xe xe xe xe xe xe xe xe xe xe"
+            "yf yf yf yf yf yf yf yf yf yf yf yf"
+            "xf xf xf xf xf xf xf xf xf xf xf xf"
+            "yg yg yg yg yg yg yg yg yg yg yg yg"
+            "xg xg xg xg xg xg xg xg xg xg xg xg"
+            "yh yh yh yh yh yh yh yh yh yh yh yh"
+            "xh xh xh xh xh xh xh xh xh xh xh xh";
+    }
+
+    .about-main {
+        margin-bottom: 5em;
+    }
+
+    .team-details img {
+        margin-bottom: 2em;
+    }
+
+    .box a {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .index-gallery {
+        grid-template-areas:
+            "ba ba ba ba ba ba ba ba ba ba ba ba"
+            "bp bp bp bp bp bp bp bp bp bp bp bp"
+            "bq bq bq bq bq bq bq bq bq bq bq bq";
+    }
+}
+
+/* @media (max-width: 42em) {
         .box{
             height: 10em;
     }
 } */
-    
