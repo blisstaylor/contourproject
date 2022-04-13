@@ -681,10 +681,16 @@ textarea {
 }
 
 /* || news */
+<<<<<<< HEAD
 .news-tiles-container {
     margin-left: 2em;
     margin-right: 2em;
 }
+=======
+/* .news-tiles-container { */
+/* padding: 2em; */
+/* } */
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
 
 .news-tile {
     width: 100%;
@@ -809,7 +815,11 @@ textarea {
     }
 
     #hamburger-nav label {
+<<<<<<< HEAD
         display: inline-block;
+=======
+
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
         color: #000;
         font-style: normal;
         font-size: 1.2em;
@@ -817,6 +827,7 @@ textarea {
         padding-bottom: 0.6em;
         padding-right: 1em;
 
+<<<<<<< HEAD
         /* display: inline-block */
         display: flex;
         justify-content: flex-end;
@@ -830,6 +841,23 @@ textarea {
         display: block;
     }
 
+=======
+
+        /*        display: inline-block;*/
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    #hamburger-items {
+        display: none;
+    }
+
+    #hamburger-nav input:checked ~ #hamburger-items {
+        display: block;
+    }
+
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
     .index-hero-info {
         top: 60vh;
     }
@@ -841,6 +869,7 @@ textarea {
     h2 {
         font-size: 1.4em;
     }
+<<<<<<< HEAD
 
     .news-tiles {
         grid-template-areas:
@@ -860,6 +889,8 @@ textarea {
 
     .news-tile-index {
         height: 30em;
+=======
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
 }
 
 /*     
@@ -874,7 +905,22 @@ textarea {
             "ah ah ah ah ah ah ah ah ah ah ah ah"
             "ai ai ai ai ai ai ai ai ai ai ai ai"
             "m m m m m m m m ad ad ad ad";
+<<<<<<< HEAD
+=======
     }
+
+    .gallery-tiles {
+        grid-template-areas:
+            "gh gh gh gh gh gh gh gh gh gh gh gh"
+            "ba ba ba ba ba ba ba ba ba ba ba ba"
+            "bb bb bb bb bb bb bh bh bh bh bh bh"
+            "bj bj bj bj bj bj bj bj bj bj bj bj"
+            "bp bp bp bp bp bp bq bq bq bq bq bq"
+            "gi gi gi gi gi gi gi gi gi gi gi gi"
+        ;
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
+    }
+}
 
     .gallery-tiles {
         grid-template-areas:
@@ -887,15 +933,52 @@ textarea {
         ;
     }
 
+<<<<<<< HEAD
     .news-tiles {
         grid-template-areas:
             "na na na na na na nb nb nb nb nb nb"
             "nc nc nc nc nc nc nd nd nd nd nd nd"
             "ne ne ne ne ne ne nf nf nf nf nf nf";
+=======
+@media (max-width: 60em) {
+    .team-details {
+        grid-template-areas:
+            "ya ya ya ya ya ya ya ya ya ya ya ya"
+            "xa xa xa xa xa xa xa xa xa xa xa xa"
+            "yb yb yb yb yb yb yb yb yb yb yb yb"
+            "xb xb xb xb xb xb xb xb xb xb xb xb"
+            "yc yc yc yc yc yc yc yc yc yc yc yc"
+            "xc xc xc xc xc xc xc xc xc xc xc xc"
+            "yd yd yd yd yd yd yd yd yd yd yd yd"
+            "xd xd xd xd xd xd xd xd xd xd xd xd"
+            "ye ye ye ye ye ye ye ye ye ye ye ye"
+            "xe xe xe xe xe xe xe xe xe xe xe xe"
+            "yf yf yf yf yf yf yf yf yf yf yf yf"
+            "xf xf xf xf xf xf xf xf xf xf xf xf"
+            "yg yg yg yg yg yg yg yg yg yg yg yg"
+            "xg xg xg xg xg xg xg xg xg xg xg xg"
+            "yh yh yh yh yh yh yh yh yh yh yh yh"
+            "xh xh xh xh xh xh xh xh xh xh xh xh"
+        ;
+    }
+
+    .about-main {
+        margin-bottom: 5em;
+    }
+
+    .team-details img {
+        margin-bottom: 2em;
+    }
+
+    .box a {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
     }
 }
 
 
+<<<<<<< HEAD
 @media (max-width: 60em) {
     .team-details {
         grid-template-areas:
@@ -930,16 +1013,32 @@ textarea {
         background-color: rgba(0, 0, 0, 0.3);
     }
 
+=======
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
     .index-gallery {
         grid-template-areas:
             "ba ba ba ba ba ba ba ba ba ba ba ba"
             "bp bp bp bp bp bp bp bp bp bp bp bp"
             "bq bq bq bq bq bq bq bq bq bq bq bq";
     }
+<<<<<<< HEAD
+=======
+
+    .news-tiles {
+        grid-template-areas:
+            "na na na na na na na na na na na na"
+            "nb nb nb nb nb nb nb nb nb nb nb nb"
+            "nc nc nc nc nc nc nc nc nc nc nc nc";
+    }
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
 }
 
 /* @media (max-width: 42em) {
         .box{
             height: 10em;
     }
+<<<<<<< HEAD
 } */
+=======
+} */
+>>>>>>> 553dc5078c28d02d10378304064849e5443d95ab
