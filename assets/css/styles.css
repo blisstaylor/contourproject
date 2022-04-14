@@ -13,7 +13,7 @@ h1 {
     font-size: 2.6em;
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 h2 {
@@ -166,8 +166,31 @@ input {
     border-bottom: #d8d8d8 1px solid;
 }
 
+.background {
+    background-color: #fafafa;
+}
+
 .upper {
     padding-top: 70px;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: -5;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-info {
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    background-color: #fafafa;
+    position: relative;
+    left: 1em;
 }
 
 /* || index */
@@ -178,40 +201,34 @@ input {
 }
 
 .index-hero {
-    width: 100%;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    z-index: -5;
     background: url(../images/hall1.jpeg);
     background-size: cover;
     background-position: center center;
-    grid-area: ih;
 }
 
 .index-hero-info {
-    width: 50%;
-    height: auto;
-    padding: 1em;
-    background-color: #fafafa;
-    position: relative;
-    left: 1em;
     top: 70vh;
 }
 
-.map-details {
-    display: flex;
-
-}
-
-.map-details p {
-    width: 50%;
-}
-
-iframe {
-    width: 50vw;
+.map iframe {
+    width: 90%;
     height: 30em;
     margin-left: 2em;
+}
+
+.map {
+    grid-area: imb;
+}
+
+.map-info {
+    grid-area: ima;
+}
+
+.map-details {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "ima ima ima ima ima imb imb imb imb imb imb imb";
 }
 
 .index-gallery {
@@ -457,6 +474,7 @@ iframe {
 form {
     /* width: 60%; */
     padding: 2em;
+    background-color: #fff;
 }
 
 form-element {
@@ -526,12 +544,22 @@ textarea {
     padding-left: 0.5em;
 }
 
-.donate {
+.donate-hero {
+    background-image: url(../images/quinlivan1.jpeg);
+}
+
+.donate-hero-info {
+    top: 70vh;
+}
+
+.form {
+    background-image: url(../images/johns1.jpeg);
+    background-size: cover;
+    background-position: center center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-        "di di di . df df df df df df df df"
-        "s s s s s s s s s s s s";
+        ". . df df df df df df df df . .";
 }
 
 .donate-intro {
@@ -543,22 +571,47 @@ textarea {
     padding-top: 0.5em;
 }
 
-.donate-form {
+.details-form {
     grid-area: df;
-    border: #d8d8d8 1px solid;
+    /* border: #d8d8d8 1px solid; */
+    margin-top: 3em;
     margin-bottom: 3em;
 }
 
+.details-form p {
+    padding-top: 1em;
+}
+
+.support-1 {
+    grid-area: sa;
+}
+
+.support-2 {
+    grid-area: sb;
+}
+
+.support-3 {
+    grid-area: sc;
+}
+
+.support-4 {
+    grid-area: sd;
+}
+
 .supporters {
-    grid-area: s;
+    padding: 5em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "sa sa sa sb sb sb sc sc sc sd sd sd";
 }
 
-.supporters p {
-    text-align: center;
+.supporters h1 {
+    margin-bottom: 0px;
 }
 
-.space {
-    padding-top: 3em;
+.supporters>.hero-info {
+    height: auto;
 }
 
 /* || about */
@@ -567,24 +620,12 @@ textarea {
 }
 
 .about-hero {
-    width: 100%;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    z-index: -5;
     background: url(../images/poliness1.jpeg);
     background-size: cover;
     background-position: center center;
-    grid-area: ih;
 }
 
 .about-hero-info {
-    width: 50%;
-    height: auto;
-    padding: 1em;
-    background-color: #fafafa;
-    position: relative;
-    left: 1em;
     top: 65vh;
 }
 
@@ -831,15 +872,36 @@ textarea {
     }
 
     .index-hero-info {
-        top: 60vh;
+        top: 50vh;
     }
 
     .index-hero-info h1 p {
         margin: 1em;
     }
 
+    .about-hero-info {
+        top: 40vh;
+        width: 70%;
+    }
+
+    .about-hero-info h4 {
+        font-size: 1.2em;
+    }
+
+    .about-hero-info p {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
     h2 {
         font-size: 1.4em;
+    }
+
+    .donate-hero-info {
+        top: 45vh;
     }
 
     .news-tiles {
@@ -860,6 +922,47 @@ textarea {
 
     .news-tile-index {
         height: 30em;
+    }
+
+    .map-details {
+        grid-template-areas:
+            "ima ima ima ima ima ima ima ima ima ima ima ima"
+            "imb imb imb imb imb imb imb imb imb imb imb imb ";
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 30em;
+        margin-left: 0;
+    }
+
+    .split {
+        display: block;
+    }
+
+    .left-form,
+    .right-form {
+        width: 100%;
+    }
+
+    .right-form {
+        padding-left: 0;
+    }
+
+    .supporters {
+        grid-template-areas:
+            "sa sa sa sa sa sa sa sa sa sa sa sa"
+            "sb sb sb sb sb sb sb sb sb sb sb sb"
+            "sc sc sc sc sc sc sc sc sc sc sc sc"
+            "sd sd sd sd sd sd sd sd sd sd sd sd";
+    }
+
+    .support-1,
+    .support-2,
+    .support-3,
+    .support-4 {
+        padding: 2em;
+    }
 }
 
 /*     
@@ -942,4 +1045,67 @@ textarea {
         .box{
             height: 10em;
     }
+} */
+
+
+/* .index-hero-info {
+    top: 70vh;
+}
+
+.about-hero-info {
+    top: 65vh;
+}
+
+.hero-info {
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    background-color: #fafafa;
+    position: relative;
+    left: 1em;
+}
+
+
+
+.index-hero {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: -5;
+    background: url(../images/hall1.jpeg);
+    background-size: cover;
+    background-position: center center;
+    grid-area: ih;
+}
+
+.about-hero {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: -5;
+    background: url(../images/poliness1.jpeg);
+    background-size: cover;
+    background-position: center center;
+    grid-area: ih;
+}
+
+.artist-hero {
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    grid-area: ai;
+    margin-bottom: 1em;
+}
+
+.donate-background {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: -5;
+    background-image: url(../images/quinlivan1.jpeg);
+    background-size: cover;
+    background-position: center center;
 } */
