@@ -1,6 +1,6 @@
 # contourproject
 ## Reflection
-### Bliss Taylor u3208737
+### Bliss Taylor
 
 
 My main goal for the contour 556 site was to highlight the art. I have attempted to do this by including whole-page hero images of past artworks, while keeping the colours of the functions of the site fairly monochromatic. This allows the images to stand out and not clash. The background of the main site is slightly off white, with the text being a very dark grey, making the site easier on the eye, rather than extremely contrasting.
