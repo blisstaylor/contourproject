@@ -20,12 +20,10 @@ h2 {
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
-    /* margin-bottom: 0.5em; */
 }
 
 h3 {
     font-size: 1.5em;
-    /* color: #868686; */
     font-weight: 200;
 }
 
@@ -100,7 +98,6 @@ header img {
 }
 
 main {
-    /* padding-top: 4.5em; */
     border-bottom: #d8d8d8 1px solid;
     background-color: #fafafa;
 }
@@ -233,7 +230,6 @@ input {
 
 .index-gallery {
     display: grid;
-    /* width: 100%; */
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
         "ba ba ba ba bp bp bp bp bq bq bq bq";
@@ -244,15 +240,13 @@ input {
 }
 
 .donate-banner {
-    /* position: absolute; */
     background-color: #fff;
-    /* padding-top: 1em; */
     height: 4em;
-    /* display: flex;   */
-    /* justify-content: center; */
     background-image: url(../images/donate.png);
     background-repeat: repeat-x;
     background-position: center;
+    transition: 0.2s;
+
 }
 
 .donate-banner:hover {
@@ -280,12 +274,10 @@ input {
     height: 35em;
     display: flex;
     flex-direction: column;
-    /* padding: 1em; */
     border: #d8d8d8 1px solid;
 }
 
 .news-tile-index img {
-    /* height: 20em; */
     object-fit: cover;
     padding-bottom: 1em;
     width: 100%;
@@ -306,13 +298,6 @@ input {
 .gallery-tiles {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    /* grid-template-areas:
-        "gh gh gh gh gh gh gh gh gh gh gh gh" 
-        "ba ba ba ba bb bb bb bb bh bh bh bh"
-        "bj bj bj bj bp bp bp bp bq bq bq bq"
-        "gi gi gi gi gi gi gi . . . . ."
-        ; */
-
     grid-template-areas:
         "gh gh gh gh gh gh gh gh gh gh gh gh"
         "ba ba ba ba bb bb bb bb bb bb bb bb"
@@ -414,8 +399,6 @@ input {
     justify-content: space-between;
     grid-area: ah;
     padding: 1em;
-    /* margin: 1em; */
-    /* margin-top: 1.5em; */
 }
 
 .artist-hero {
@@ -425,11 +408,6 @@ input {
     grid-area: ai;
     margin-bottom: 1em;
 }
-
-/* .arrow {
-        margin-top: 75vh;
-        align-items: center;
-    } */
 
 .artist-main {
     grid-area: m;
@@ -472,7 +450,6 @@ input {
 
 /* || donate */
 form {
-    /* width: 60%; */
     padding: 2em;
     background-color: #fff;
 }
@@ -562,18 +539,8 @@ textarea {
         ". . df df df df df df df df . .";
 }
 
-.donate-intro {
-    grid-area: di;
-}
-
-.donate-intro h2,
-.donate-intro p {
-    padding-top: 0.5em;
-}
-
 .details-form {
     grid-area: df;
-    /* border: #d8d8d8 1px solid; */
     margin-top: 3em;
     margin-bottom: 3em;
 }
@@ -639,22 +606,20 @@ textarea {
 
 .about-image img {
     width: 100%;
-    /* margin-right: 30px; */
 }
 
 .team-details {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
-        "xa xa xa xa xa xa xa . . ya ya ya"
-        "xb xb xb xb xb xb xb . . yb yb yb"
-        "xc xc xc xc xc xc xc . . yc yc yc"
-        "xd xd xd xd xd xd xd . . yd yd yd"
-        "xe xe xe xe xe xe xe . . ye ye ye"
-        "xf xf xf xf xf xf xf . . yf yf yf"
-        "xg xg xg xg xg xg xg . . yg yg yg"
-        "xh xh xh xh xh xh xh . . yh yh yh"
-    ;
+        ". ya ya ya xa xa xa xa xa xa xa ."
+        ". yb yb yb xb xb xb xb xb xb xb ."
+        ". yc yc yc xc xc xc xc xc xc xc ."
+        ". yd yd yd xd xd xd xd xd xd xd ."
+        ". ye ye ye xe xe xe xe xe xe xe ."
+        ". yf yf yf xf xf xf xf xf xf xf ."
+        ". yg yg yg xg xg xg xg xg xg xg ."
+        ". yh yh yh xh xh xh xh xh xh xh .";
 }
 
 .about-a {
@@ -732,7 +697,6 @@ textarea {
     height: 35em;
     display: flex;
     flex-direction: column;
-    /* padding: 1em; */
     border: #d8d8d8 1px solid;
 }
 
@@ -753,7 +717,6 @@ textarea {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1em;
-    /* padding: 2em; */
     grid-template-areas:
         "na na na na nb nb nb nb nc nc nc nc"
         "nd nd nd nd ne ne ne ne nf nf nf nf";
@@ -784,7 +747,6 @@ textarea {
 }
 
 .video iframe {
-    /* padding-top: 5em; */
     width: 90vw;
     height: 80vh;
     margin: 0 auto;
@@ -798,13 +760,30 @@ textarea {
     background-color: #fafafa;
 }
 
-.artist-header {
-    display: flex;
-    justify-content: space-between;
-    grid-area: ah;
-    padding: 1em;
-    /* margin: 1em; */
-    /* margin-top: 1.5em; */
+/* || guide */
+
+.guide-hero {
+    background-image: url(../images/booth1.jpeg);
+}
+
+.guide-hero-info {
+    top: 70vh;
+}
+
+.guide-details {
+    grid-area: wo;
+    padding: 2em;
+    background-color: #fafafa;
+}
+
+.guide {
+    background-image: url(../images/johns1.jpeg);
+    background-size: cover;
+    background-position: center bottom;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        ". . wo wo wo wo wo wo wo wo . .";
 }
 
 /* || media queries */
@@ -845,20 +824,11 @@ textarea {
         box-sizing: border-box;
         display: block;
         width: 100%;
-        /* border-top: 1px solid #000; */
         margin-right: 2em;
     }
 
     #hamburger-nav label {
         display: inline-block;
-        color: #000;
-        font-style: normal;
-        font-size: 1.2em;
-        padding-top: 0.6em;
-        padding-bottom: 0.6em;
-        padding-right: 1em;
-
-        /* display: inline-block */
         display: flex;
         justify-content: flex-end;
     }
@@ -871,12 +841,96 @@ textarea {
         display: block;
     }
 
+    #hamburger~label {
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        z-index: 99;
+        margin-top: 15px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    /* middle line of hamburger */
+    #hamburger~label span {
+        display: inline-block;
+        width: 20px;
+        height: 3px;
+        background-color: #868686;
+        border-radius: 3px;
+        margin-left: var(--space-small);
+    }
+
+    /* top and bottom lines of hamburger */
+    #hamburger~label span::after,
+    #hamburger~label span::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        background-color: #868686;
+        border-radius: 3px;
+    }
+
+    #hamburger~label span::after {
+        margin-top: 8px;
+    }
+
+    #hamburger~label span::before {
+        margin-top: -8px;
+    }
+
+    #hamburger~label span {
+        transition-duration: 0s;
+        transition-delay: 0.2s;
+    }
+
+    #hamburger~label span::after,
+    #hamburger~label span::before {
+        transition-duration: 0.2s;
+        transition-property: margin, transform;
+        transition-delay: 0.2s, 0s;
+    }
+
+    /* hide middle line */
+    #hamburger:checked~label span {
+        background-color: transparent;
+    }
+
+    /* top and bottom lines animation */
+    #hamburger:checked~label span:before,
+    #hamburger:checked~label span:after {
+        transition-delay: 0s, 0.2s;
+        margin-top: 0;
+    }
+
+    /* rotate top line */
+    #hamburger:checked~label span:before {
+        transform: rotate(45deg);
+    }
+
+    /* rotate bottom line */
+    #hamburger:checked~label span:after {
+        transform: rotate(-45deg);
+    }
+
     .index-hero-info {
         top: 50vh;
     }
 
     .index-hero-info h1 p {
         margin: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.4em;
     }
 
     .about-hero-info {
@@ -892,16 +946,12 @@ textarea {
         font-size: 0.9em;
     }
 
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.4em;
-    }
-
     .donate-hero-info {
         top: 45vh;
+    }
+
+    .guide-hero-info {
+        top: 50vh;
     }
 
     .news-tiles {
@@ -965,12 +1015,6 @@ textarea {
     }
 }
 
-/*     
-    .box{
-        height: 20em;
-        width: 100vw;
-} */
-
 @media (min-width: 42em) and (max-width: 70em) {
     .artist {
         grid-template-areas:
@@ -996,6 +1040,12 @@ textarea {
             "nc nc nc nc nc nc nd nd nd nd nd nd"
             "ne ne ne ne ne ne nf nf nf nf nf nf";
     }
+
+    .about-hero-info {
+        top: 50vh;
+        width: 70%;
+    }
+
 }
 
 
@@ -1039,73 +1089,5 @@ textarea {
             "bp bp bp bp bp bp bp bp bp bp bp bp"
             "bq bq bq bq bq bq bq bq bq bq bq bq";
     }
+
 }
-
-/* @media (max-width: 42em) {
-        .box{
-            height: 10em;
-    }
-} */
-
-
-/* .index-hero-info {
-    top: 70vh;
-}
-
-.about-hero-info {
-    top: 65vh;
-}
-
-.hero-info {
-    width: 50%;
-    height: auto;
-    padding: 1em;
-    background-color: #fafafa;
-    position: relative;
-    left: 1em;
-}
-
-
-
-.index-hero {
-    width: 100%;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    z-index: -5;
-    background: url(../images/hall1.jpeg);
-    background-size: cover;
-    background-position: center center;
-    grid-area: ih;
-}
-
-.about-hero {
-    width: 100%;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    z-index: -5;
-    background: url(../images/poliness1.jpeg);
-    background-size: cover;
-    background-position: center center;
-    grid-area: ih;
-}
-
-.artist-hero {
-    width: 100%;
-    height: 80vh;
-    background-size: cover;
-    grid-area: ai;
-    margin-bottom: 1em;
-}
-
-.donate-background {
-    width: 100%;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    z-index: -5;
-    background-image: url(../images/quinlivan1.jpeg);
-    background-size: cover;
-    background-position: center center;
-} */
